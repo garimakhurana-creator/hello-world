@@ -4,181 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Garima for WISE President - Mesa School</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-        }
-
-        header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 60px 20px;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        header h1 {
-            font-size: 3.5em;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-        }
-
-        header .tagline {
-            font-size: 1.5em;
-            font-weight: 300;
-            margin-bottom: 20px;
-            opacity: 0.95;
-        }
-
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-
-        .about-section {
-            background: #f8f9fa;
-            padding: 40px;
-            border-radius: 10px;
-            margin: 40px 0;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-        }
-
-        .about-section h2 {
-            color: #667eea;
-            font-size: 2em;
-            margin-bottom: 20px;
-        }
-
-        .profile-info {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            margin: 20px 0;
-        }
-
-        .info-card {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            border-left: 4px solid #667eea;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-        }
-
-        .info-card strong {
-            color: #667eea;
-            display: block;
-            margin-bottom: 8px;
-            font-size: 1.1em;
-        }
-
-        .platform-section {
-            padding: 40px 0;
-            margin: 40px 0;
-        }
-
-        .platform-section h2 {
-            color: #667eea;
-            font-size: 2em;
-            margin-bottom: 30px;
-            text-align: center;
-        }
-
-        .platform-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
-
-        .platform-item {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 25px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .platform-item:hover {
-            transform: translateY(-5px);
-        }
-
-        .platform-item h3 {
-            margin-bottom: 10px;
-            font-size: 1.3em;
-        }
-
-        .cta-section {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 50px 40px;
-            text-align: center;
-            border-radius: 10px;
-            margin: 40px 0;
-            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
-        }
-
-        .cta-section h2 {
-            font-size: 2em;
-            margin-bottom: 20px;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background: white;
-            color: #667eea;
-            padding: 15px 40px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.1em;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            border: none;
-        }
-
-        .cta-button:hover {
-            background: #f0f0f0;
-            transform: scale(1.05);
-        }
-
-        footer {
-            background: #333;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            margin-top: 60px;
-        }
-
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2em;
-            }
-
-            header .tagline {
-                font-size: 1.1em;
-            }
-
-            .profile-info,
-            .platform-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .container {
-                padding: 20px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://elevenlabs.io/convai-widget/index.js" async></script>
 </head>
 <body>
+    <!-- Navigation -->
+    <nav>
+        <a href="index.html" class="active">Home</a>
+        <a href="test.html">My Story</a>
+    </nav>
+
+    <!-- Garima AI voice agent -->
+    <elevenlabs-convai agent-id="agent_2701m1c005vtf58rghy7k7nv7zbq"></elevenlabs-convai>
+
     <!-- Header Section -->
     <header>
         <h1>GARIMA</h1>
@@ -244,7 +82,7 @@
             <p style="font-size: 1.2em; margin-bottom: 30px;">
                 Together, we can create lasting positive change at Mesa School. Your vote matters!
             </p>
-            <button class="cta-button">Learn More & Support</button>
+            <a href="test.html" class="cta-button">Learn More About Me</a>
         </div>
     </div>
 
