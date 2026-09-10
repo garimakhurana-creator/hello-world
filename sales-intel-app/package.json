@@ -1,0 +1,12 @@
+{
+  "name": "sales-intel-app",
+  "version": "1.0.0",
+  "description": "Web app for the B2B sales-intelligence & outreach agent",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}

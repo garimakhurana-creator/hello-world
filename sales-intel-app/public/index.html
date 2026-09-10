@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sales Intel Agent</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="page">
+  <header>
+    <h1>Sales Intel Agent</h1>
+    <p class="subtitle">Research a target account and generate personalized outreach — backed by live web research, not a template.</p>
+  </header>
+
+  <form id="research-form">
+    <div class="columns">
+      <fieldset>
+        <legend>Company A — the seller</legend>
+        <label>Name <span class="req">*</span>
+          <input type="text" name="a-name" required placeholder="Acme CRM" />
+        </label>
+        <label>Website
+          <input type="url" name="a-website" placeholder="https://acme.com" />
+        </label>
+        <label>Product / service <span class="req">*</span>
+          <textarea name="a-product" rows="3" required placeholder="AI-powered support ticketing for mid-market SaaS companies"></textarea>
+        </label>
+        <label>Target industry <span class="opt">(optional)</span>
+          <input type="text" name="a-industry" placeholder="B2B SaaS" />
+        </label>
+        <label>Target geography <span class="opt">(optional)</span>
+          <input type="text" name="a-geography" placeholder="North America" />
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Company B — the target account</legend>
+        <label>Name <span class="req">*</span>
+          <input type="text" name="b-name" required placeholder="Notion" />
+        </label>
+        <label>Website
+          <input type="url" name="b-website" placeholder="https://notion.so" />
+        </label>
+        <label>Target department <span class="opt">(optional)</span>
+          <input type="text" name="b-department" placeholder="Customer Support" />
+        </label>
+        <label>Target person <span class="opt">(optional)</span>
+          <input type="text" name="b-person" placeholder="Name / title, if known" />
+        </label>
+      </fieldset>
+    </div>
+
+    <button type="submit" id="submit-btn">Run sales intel</button>
+    <p class="hint">This runs live web research and can take 1–3 minutes.</p>
+  </form>
+
+  <section id="status" hidden></section>
+
+  <section id="result" hidden>
+    <div class="result-actions">
+      <button id="copy-btn" type="button">Copy report</button>
+      <button id="download-btn" type="button">Download .txt</button>
+    </div>
+    <pre id="report-output"></pre>
+  </section>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

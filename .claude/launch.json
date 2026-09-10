@@ -6,6 +6,18 @@
       "runtimeExecutable": "python",
       "runtimeArgs": ["-m", "http.server", "8123"],
       "port": 8123
+    },
+    {
+      "name": "idea-tracker",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["--prefix", "idea-tracker", "start"],
+      "port": 3000
+    },
+    {
+      "name": "sales-intel-app",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["--prefix", "sales-intel-app", "start"],
+      "port": 3100
     }
   ]
 }
