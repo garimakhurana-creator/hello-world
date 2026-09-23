@@ -18,6 +18,12 @@
       "runtimeExecutable": "npm",
       "runtimeArgs": ["--prefix", "sales-intel-app", "start"],
       "port": 3100
+    },
+    {
+      "name": "movie-matchmaker",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["--prefix", "movie-matchmaker", "start"],
+      "port": 3200
     }
   ]
 }
