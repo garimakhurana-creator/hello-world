@@ -25,7 +25,7 @@ export default async function JoinGroup(props: PageProps<"/join/[code]">) {
   return (
     <Page narrow>
       <Eyebrow>You&apos;re invited</Eyebrow>
-      <h1 className="mt-2 text-3xl font-semibold tracking-tight">{group.name}</h1>
+      <h1 className="mt-2 font-serif text-4xl leading-tight tracking-tight text-stone-900 sm:text-5xl">{group.name}</h1>
       <p className="mt-2 text-stone-600">
         {coordinator?.name} started this group for {group.expectedSize} people. Joined so far: {members.map((m) => m.name).join(", ")}.
       </p>

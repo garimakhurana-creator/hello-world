@@ -3,21 +3,21 @@ import type { Check } from "@/lib/types";
 
 export const btn = {
   primary:
-    "inline-flex items-center justify-center gap-2 rounded-xl bg-brand-600 px-5 py-3 text-sm font-medium text-white shadow-sm hover:bg-brand-700 disabled:opacity-50 disabled:cursor-not-allowed transition",
+    "inline-flex items-center justify-center gap-2 rounded-full bg-brand-700 px-6 py-3 text-sm font-semibold text-white shadow-[0_6px_20px_-6px_rgba(17,90,77,0.6)] hover:bg-brand-900 hover:-translate-y-px active:translate-y-0 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0 transition",
   secondary:
-    "inline-flex items-center justify-center gap-2 rounded-xl border border-stone-300 bg-white px-5 py-3 text-sm font-medium text-stone-800 hover:bg-stone-50 disabled:opacity-50 transition",
+    "inline-flex items-center justify-center gap-2 rounded-full border border-stone-300 bg-white px-6 py-3 text-sm font-semibold text-stone-800 hover:border-stone-400 hover:bg-stone-50 disabled:opacity-50 transition",
   ghost: "inline-flex items-center gap-1 text-sm font-medium text-brand-700 hover:text-brand-900",
 };
 
 export const input =
-  "w-full rounded-xl border border-stone-300 bg-white px-3.5 py-2.5 text-base outline-none focus:border-brand-500 focus:ring-2 focus:ring-brand-100";
+  "w-full rounded-xl border border-stone-300 bg-white px-3.5 py-2.5 text-base outline-none transition focus:border-brand-500 focus:ring-4 focus:ring-brand-100";
 
 export function Page({ children, narrow }: { children: ReactNode; narrow?: boolean }) {
   return <div className={`mx-auto w-full px-4 py-8 sm:py-10 ${narrow ? "max-w-xl" : "max-w-5xl"}`}>{children}</div>;
 }
 
 export function Card({ children, className = "" }: { children: ReactNode; className?: string }) {
-  return <div className={`rounded-2xl border border-stone-200 bg-white p-5 shadow-sm ${className}`}>{children}</div>;
+  return <div className={`rounded-3xl border border-stone-200/80 bg-white p-5 shadow-[0_1px_2px_rgba(28,27,25,0.04),0_8px_24px_-12px_rgba(28,27,25,0.12)] sm:p-6 ${className}`}>{children}</div>;
 }
 
 export function Eyebrow({ children }: { children: ReactNode }) {
@@ -76,5 +76,35 @@ export function Stat({ status, children }: { status: Status; children: ReactNode
       <StatusIcon status={status} className="mt-0.5" />
       <span>{children}</span>
     </div>
+  );
+}
+
+// One colour per person, by their position in the group, used everywhere
+// that person appears so they're easy to follow across screens.
+const PERSON_COLORS = [
+  "bg-teal-100 text-teal-800 ring-teal-200",
+  "bg-violet-100 text-violet-800 ring-violet-200",
+  "bg-amber-100 text-amber-800 ring-amber-200",
+  "bg-sky-100 text-sky-800 ring-sky-200",
+  "bg-rose-100 text-rose-800 ring-rose-200",
+  "bg-lime-100 text-lime-800 ring-lime-200",
+];
+
+export function Avatar({ name, index, size = "md" }: { name: string; index: number; size?: "sm" | "md" | "lg" }) {
+  const dims = { sm: "h-6 w-6 text-[11px]", md: "h-9 w-9 text-sm", lg: "h-11 w-11 text-base" }[size];
+  return (
+    <span aria-hidden className={`grid shrink-0 place-items-center rounded-full font-semibold ring-2 ${dims} ${PERSON_COLORS[index % PERSON_COLORS.length]}`}>
+      {name.trim()[0]?.toUpperCase() ?? "?"}
+    </span>
+  );
+}
+
+export function Meter({ value, total, tone }: { value: number; total: number; tone: "brand" | "amber" | "rose" }) {
+  const pct = total ? Math.round((value / total) * 100) : 100;
+  const fill = { brand: "bg-brand-500", amber: "bg-amber-400", rose: "bg-rose-400" }[tone];
+  return (
+    <span className="block h-1.5 w-full overflow-hidden rounded-full bg-stone-200/70" role="meter" aria-valuenow={value} aria-valuemin={0} aria-valuemax={total}>
+      <span className={`block h-full rounded-full ${fill}`} style={{ width: `${pct}%` }} />
+    </span>
   );
 }

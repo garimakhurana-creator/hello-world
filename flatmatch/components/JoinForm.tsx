@@ -35,7 +35,7 @@ export function JoinForm({ code }: { code: string }) {
     >
       <label className="block">
         <span className="text-sm font-medium">Your first name</span>
-        <input className={`${input} mt-1.5`} value={name} onChange={(e) => setName(e.target.value)} placeholder="Meera" required autoFocus />
+        <input className={`${input} mt-1.5`} value={name} onChange={(e) => setName(e.target.value)} placeholder="Your name" required autoFocus />
       </label>
       {error && <p className="text-sm text-rose-700">{error}</p>}
       <button className={`${btn.primary} w-full`} disabled={busy}>{busy ? "Joining…" : "Join & add my requirements"}</button>

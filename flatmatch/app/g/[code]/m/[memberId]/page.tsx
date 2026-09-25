@@ -23,7 +23,7 @@ export default async function MemberRequirements(props: PageProps<"/g/[code]/m/[
         <Eyebrow>
           <span className="mt-4 block">{me.submittedAt ? "Editing your answers" : "Step 2 of 3"}</span>
         </Eyebrow>
-        <h1 className="mt-2 text-3xl font-semibold tracking-tight">{me.name}, what do you need from this flat?</h1>
+        <h1 className="mt-2 font-serif text-4xl leading-tight tracking-tight text-stone-900 sm:text-5xl">{me.name}, what do you need from this flat?</h1>
         <p className="mt-2 text-stone-600">
           Answer for yourself only. Mark something <b>Must have</b> only if you&apos;d genuinely say no to a flat without it.
           Everything else is a <b>Prefer</b>, and those are what the group can negotiate.

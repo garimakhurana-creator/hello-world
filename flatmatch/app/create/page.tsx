@@ -35,7 +35,7 @@ export default function CreateGroup() {
   return (
     <Page narrow>
       <Eyebrow>Step 1 of 3</Eyebrow>
-      <h1 className="mt-2 text-3xl font-semibold tracking-tight">Create your group</h1>
+      <h1 className="mt-2 font-serif text-4xl leading-tight tracking-tight text-stone-900 sm:text-5xl">Create your group</h1>
       <p className="mt-2 text-stone-600">Next you&apos;ll add your own requirements. Then you get an invite link for the others.</p>
       <Card className="mt-6">
         <form onSubmit={submit} className="space-y-5">
@@ -45,7 +45,7 @@ export default function CreateGroup() {
           </label>
           <label className="block">
             <span className="text-sm font-medium">Your first name</span>
-            <input className={`${input} mt-1.5`} value={yourName} onChange={(e) => setYourName(e.target.value)} placeholder="Riya" required />
+            <input className={`${input} mt-1.5`} value={yourName} onChange={(e) => setYourName(e.target.value)} placeholder="Your name" required />
           </label>
           <div>
             <span className="text-sm font-medium">How many people, including you?</span>

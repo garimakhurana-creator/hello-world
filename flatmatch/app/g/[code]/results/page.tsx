@@ -25,12 +25,12 @@ export default async function Results(props: PageProps<"/g/[code]/results">) {
       <Page>
         <Link href={`/g/${group.code}`} className={btn.ghost}>← Group summary</Link>
         <Eyebrow><span className="mt-4 block">Step 3 of 3 · Your shortlist</span></Eyebrow>
-        <h1 className="mt-2 text-3xl font-semibold tracking-tight">{shortlist.length} flats worth discussing</h1>
+        <h1 className="mt-2 font-serif text-4xl leading-tight tracking-tight text-stone-900 sm:text-5xl">{shortlist.length} flats worth discussing</h1>
         <p className="mt-2 max-w-3xl text-stone-600">
           We checked {results.length} {results.some((r) => r.property.source === "nobroker") ? "NoBroker listings (landlords open to flatmates)" : "listings"} against everyone&apos;s answers. {fullCount === 0
             ? "None meets every must-have, so these are the closest, with exactly what breaks."
             : `${fullCount} ${fullCount === 1 ? "meets" : "meet"} every must-have.`}{" "}
-          This isn&apos;t a recommendation. It shows who gets what, so the three of you can decide.
+          This isn&apos;t a recommendation. It shows who gets what, so you can decide together.
         </p>
 
         <details className="mt-4 max-w-3xl rounded-xl border border-stone-200 bg-white p-4 text-sm">

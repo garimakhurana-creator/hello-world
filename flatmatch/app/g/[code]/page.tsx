@@ -20,7 +20,7 @@ export default async function GroupSummary(props: PageProps<"/g/[code]">) {
   return (
     <Page>
       <Eyebrow>Group summary · code {group.code}</Eyebrow>
-      <h1 className="mt-2 text-3xl font-semibold tracking-tight">{group.name}</h1>
+      <h1 className="mt-2 font-serif text-4xl leading-tight tracking-tight text-stone-900 sm:text-5xl">{group.name}</h1>
 
       <div className="mt-6 grid gap-4 lg:grid-cols-[1fr_1.4fr]">
         <Card>

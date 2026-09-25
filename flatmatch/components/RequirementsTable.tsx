@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import { AMENITY_LABELS, FURNISHING_LABELS, floorLabel, rupees } from "@/lib/labels";
 import { AMENITIES, type Level, type Requirements } from "@/lib/types";
-import { LevelTag } from "./ui";
+import { Avatar, LevelTag } from "./ui";
 
 type P = { id: string; name: string; requirements: Requirements };
 
@@ -48,7 +48,11 @@ export function RequirementsTable({ people }: { people: P[] }) {
         <thead>
           <tr className="border-b border-stone-200 text-xs uppercase tracking-wide text-stone-500">
             <th className="py-2 pr-4 font-medium" />
-            {people.map((p) => <th key={p.id} className="py-2 pr-4 font-semibold text-stone-800">{p.name}</th>)}
+            {people.map((p, i) => (
+              <th key={p.id} className="py-2 pr-4 font-semibold normal-case tracking-normal text-stone-800">
+                <span className="flex items-center gap-2 text-sm"><Avatar name={p.name} index={i} size="sm" /> {p.name}</span>
+              </th>
+            ))}
           </tr>
         </thead>
         <tbody className="divide-y divide-stone-100">

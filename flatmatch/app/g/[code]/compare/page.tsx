@@ -2,7 +2,7 @@ import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
 import type { ReactNode } from "react";
 import { PropertyImage } from "@/components/PropertyImage";
-import { btn, Eyebrow, LevelTag, Page, StatusIcon, statusOf } from "@/components/ui";
+import { Avatar, btn, Eyebrow, LevelTag, Page, StatusIcon, statusOf } from "@/components/ui";
 import { loadGroup, SHORTLIST_SIZE } from "@/lib/group";
 import { FURNISHING_LABELS, floorLabel, rupees } from "@/lib/labels";
 import type { PropertyResult } from "@/lib/types";
@@ -45,7 +45,7 @@ export default async function Compare(props: PageProps<"/g/[code]/compare">) {
     <Page>
       <Link href={`/g/${group.code}/results`} className={btn.ghost}>← Shortlist</Link>
       <Eyebrow><span className="mt-4 block">Trade-off view</span></Eyebrow>
-      <h1 className="mt-2 text-3xl font-semibold tracking-tight">What each person gets, and gives up</h1>
+      <h1 className="mt-2 font-serif text-4xl leading-tight tracking-tight text-stone-900 sm:text-5xl">What each person gets, and gives up</h1>
       <p className="mt-2 max-w-3xl text-stone-600">Read across a row to see how one person fares at each flat. Choose up to three flats to compare.</p>
 
       <div className="mt-4 flex flex-wrap gap-2">
@@ -104,11 +104,11 @@ export default async function Compare(props: PageProps<"/g/[code]/compare">) {
               />
               <Row label="Main compromise" cells={picked.map((r) => <span key="c" className="text-stone-700">{r.mainCompromise}</span>)} />
 
-              {people.map((person) => (
+              {people.map((person, pi) => (
                 <Row
                   key={person.id}
                   strong
-                  label={person.name}
+                  label={<span className="flex items-center gap-2"><Avatar name={person.name} index={pi} size="sm" /> {person.name}</span>}
                   cells={picked.map((r) => {
                     const m = r.members.find((x) => x.memberId === person.id)!;
                     const gives = m.checks.filter((c) => !c.ok);

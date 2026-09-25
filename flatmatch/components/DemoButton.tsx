@@ -21,7 +21,7 @@ export function DemoButton({ className = btn.secondary }: { className?: string }
         router.push(`/g/${data.code}`);
       }}
     >
-      {busy ? "Setting up…" : "Try the demo (Riya, Meera & Kavita)"}
+      {busy ? "Setting up…" : "Explore a sample group"}
     </button>
   );
 }

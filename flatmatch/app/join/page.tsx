@@ -10,7 +10,7 @@ export default function JoinWithCode() {
   return (
     <Page narrow>
       <Eyebrow>Join a group</Eyebrow>
-      <h1 className="mt-2 text-3xl font-semibold tracking-tight">Enter your invite code</h1>
+      <h1 className="mt-2 font-serif text-4xl leading-tight tracking-tight text-stone-900 sm:text-5xl">Enter your invite code</h1>
       <p className="mt-2 text-stone-600">It&apos;s the 6-character code in the link your friend shared.</p>
       <Card className="mt-6">
         <form
