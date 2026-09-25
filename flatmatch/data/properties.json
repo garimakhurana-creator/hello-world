@@ -1,0 +1,146 @@
+[
+  {
+    "id": "p01", "title": "3BHK in Baner", "area": "Baner", "address": "Near Baner Road, off Pan Card Club Rd",
+    "rent": 45000, "bedrooms": 3, "bathrooms": 3, "floor": 7, "totalFloors": 14,
+    "lift": true, "parking": true, "furnishing": "semi", "petFriendly": false,
+    "amenities": ["powerBackup", "security", "balcony"],
+    "commute": { "Hinjewadi": 25, "Shivajinagar": 30, "Kharadi": 60, "Magarpatta": 62 },
+    "description": "Bright corner flat in a gated society with a clubhouse. Wardrobes and kitchen fitted; gym is 1.2 km away on Baner Road. Society allows bachelors.",
+    "image": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=900&q=70&auto=format&fit=crop"
+  },
+  {
+    "id": "p02", "title": "3BHK in Aundh", "area": "Aundh", "address": "ITI Road, near Westend Mall",
+    "rent": 52000, "bedrooms": 3, "bathrooms": 3, "floor": 4, "totalFloors": 7,
+    "lift": true, "parking": true, "furnishing": "furnished", "petFriendly": true,
+    "amenities": ["security", "balcony", "powerBackup"],
+    "commute": { "Hinjewadi": 32, "Shivajinagar": 18, "Kharadi": 50, "Magarpatta": 48 },
+    "description": "Fully furnished with beds, sofa, fridge and washing machine. Quiet lane, walkable to cafes and the mall. Landlord is fine with pets.",
+    "image": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=900&q=70&auto=format&fit=crop"
+  },
+  {
+    "id": "p03", "title": "3BHK at Balewadi High Street", "area": "Balewadi", "address": "Balewadi High Street, Mahalunge side",
+    "rent": 48000, "bedrooms": 3, "bathrooms": 2, "floor": 11, "totalFloors": 22,
+    "lift": true, "parking": true, "furnishing": "furnished", "petFriendly": false,
+    "amenities": ["gym", "pool", "security", "powerBackup"],
+    "commute": { "Hinjewadi": 20, "Shivajinagar": 36, "Kharadi": 65, "Magarpatta": 66 },
+    "description": "High-rise with pool and in-building gym, five minutes' walk from the High Street restaurants. Two bathrooms shared between three rooms.",
+    "image": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=900&q=70&auto=format&fit=crop"
+  },
+  {
+    "id": "p04", "title": "3BHK in Wakad", "area": "Wakad", "address": "Kaspate Wasti, Wakad",
+    "rent": 38000, "bedrooms": 3, "bathrooms": 3, "floor": 3, "totalFloors": 12,
+    "lift": true, "parking": true, "furnishing": "semi", "petFriendly": true,
+    "amenities": ["gym", "security", "powerBackup"],
+    "commute": { "Hinjewadi": 15, "Shivajinagar": 42, "Kharadi": 72, "Magarpatta": 70 },
+    "description": "Good value in a newer society with a small gym. Close to the Hinjewadi flyover; city-side commutes are long at peak hours.",
+    "image": "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=900&q=70&auto=format&fit=crop"
+  },
+  {
+    "id": "p05", "title": "3BHK in Kothrud", "area": "Kothrud", "address": "Karve Nagar, near Kothrud depot",
+    "rent": 42000, "bedrooms": 3, "bathrooms": 2, "floor": 2, "totalFloors": 4,
+    "lift": false, "parking": false, "furnishing": "unfurnished", "petFriendly": true,
+    "amenities": ["balcony"],
+    "commute": { "Hinjewadi": 42, "Shivajinagar": 24, "Kharadi": 55, "Magarpatta": 45 },
+    "description": "Spacious older building with large rooms and a long balcony. No lift and street parking only. Very residential, lots of greenery.",
+    "image": "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=900&q=70&auto=format&fit=crop"
+  },
+  {
+    "id": "p06", "title": "3BHK in Viman Nagar", "area": "Viman Nagar", "address": "Off Nagar Road, near Phoenix Marketcity",
+    "rent": 58000, "bedrooms": 3, "bathrooms": 3, "floor": 9, "totalFloors": 16,
+    "lift": true, "parking": true, "furnishing": "furnished", "petFriendly": false,
+    "amenities": ["gym", "pool", "security", "powerBackup", "balcony"],
+    "commute": { "Hinjewadi": 62, "Shivajinagar": 30, "Kharadi": 15, "Magarpatta": 28 },
+    "description": "Premium furnished flat with a pool, gym and a large balcony. Close to the airport and malls; far from the west-side IT parks.",
+    "image": "https://images.unsplash.com/photo-1554995207-c18c203602cb?w=900&q=70&auto=format&fit=crop"
+  },
+  {
+    "id": "p07", "title": "3BHK in Kalyani Nagar", "area": "Kalyani Nagar", "address": "Lane 6, Kalyani Nagar",
+    "rent": 65000, "bedrooms": 3, "bathrooms": 3, "floor": 5, "totalFloors": 10,
+    "lift": true, "parking": true, "furnishing": "furnished", "petFriendly": true,
+    "amenities": ["gym", "security", "powerBackup", "balcony"],
+    "commute": { "Hinjewadi": 56, "Shivajinagar": 24, "Kharadi": 16, "Magarpatta": 25 },
+    "description": "Tree-lined lane, pet-friendly society with a gym. Fully furnished including air conditioning in all bedrooms.",
+    "image": "https://images.unsplash.com/photo-1560185893-a55cbc8c57e8?w=900&q=70&auto=format&fit=crop"
+  },
+  {
+    "id": "p08", "title": "3BHK in Kharadi", "area": "Kharadi", "address": "Near EON IT Park, Kharadi",
+    "rent": 46000, "bedrooms": 3, "bathrooms": 3, "floor": 14, "totalFloors": 24,
+    "lift": true, "parking": true, "furnishing": "semi", "petFriendly": false,
+    "amenities": ["gym", "pool", "security", "powerBackup"],
+    "commute": { "Hinjewadi": 76, "Shivajinagar": 40, "Kharadi": 8, "Magarpatta": 24 },
+    "description": "Large township with pool and gym, walking distance to EON IT Park. Semi-furnished with modular kitchen.",
+    "image": "https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=900&q=70&auto=format&fit=crop"
+  },
+  {
+    "id": "p09", "title": "3BHK near Magarpatta", "area": "Magarpatta", "address": "Hadapsar, next to Magarpatta City",
+    "rent": 44000, "bedrooms": 3, "bathrooms": 2, "floor": 6, "totalFloors": 11,
+    "lift": true, "parking": true, "furnishing": "semi", "petFriendly": true,
+    "amenities": ["gym", "security", "powerBackup", "balcony"],
+    "commute": { "Hinjewadi": 75, "Shivajinagar": 35, "Kharadi": 24, "Magarpatta": 8 },
+    "description": "Well-kept society with a gym and balcony, a short walk to Magarpatta offices and Seasons Mall. Pets allowed.",
+    "image": "https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?w=900&q=70&auto=format&fit=crop"
+  },
+  {
+    "id": "p10", "title": "3BHK in Koregaon Park", "area": "Koregaon Park", "address": "North Main Road, Koregaon Park",
+    "rent": 72000, "bedrooms": 3, "bathrooms": 3, "floor": 3, "totalFloors": 5,
+    "lift": true, "parking": true, "furnishing": "furnished", "petFriendly": true,
+    "amenities": ["security", "balcony", "powerBackup"],
+    "commute": { "Hinjewadi": 55, "Shivajinagar": 20, "Kharadi": 25, "Magarpatta": 20 },
+    "description": "Boutique low-rise in the most central, leafy part of the city. Expensive, but everything is walkable.",
+    "image": "https://images.unsplash.com/photo-1536376072261-38c75010e6c9?w=900&q=70&auto=format&fit=crop"
+  },
+  {
+    "id": "p11", "title": "3BHK in Hinjewadi Phase 1", "area": "Hinjewadi", "address": "Phase 1, near Wipro circle",
+    "rent": 34000, "bedrooms": 3, "bathrooms": 3, "floor": 10, "totalFloors": 18,
+    "lift": true, "parking": true, "furnishing": "unfurnished", "petFriendly": false,
+    "amenities": ["gym", "pool", "security", "powerBackup"],
+    "commute": { "Hinjewadi": 8, "Shivajinagar": 50, "Kharadi": 80, "Magarpatta": 80 },
+    "description": "Cheapest 3BHK on the list with a pool and gym. Unfurnished, and a long way from the city centre and east side.",
+    "image": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=900&q=70&auto=format&fit=crop"
+  },
+  {
+    "id": "p12", "title": "3BHK in Bavdhan", "area": "Bavdhan", "address": "Near Chandani Chowk, Bavdhan",
+    "rent": 40000, "bedrooms": 3, "bathrooms": 3, "floor": 1, "totalFloors": 7,
+    "lift": true, "parking": true, "furnishing": "semi", "petFriendly": true,
+    "amenities": ["security", "balcony", "powerBackup"],
+    "commute": { "Hinjewadi": 30, "Shivajinagar": 30, "Kharadi": 60, "Magarpatta": 55 },
+    "description": "Hill-facing first-floor flat with a big balcony. Pet-friendly society, calm neighbourhood, close to the highway.",
+    "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&q=70&auto=format&fit=crop"
+  },
+  {
+    "id": "p13", "title": "3BHK in Pimple Saudagar", "area": "Pimple Saudagar", "address": "Rahatani Road, Pimple Saudagar",
+    "rent": 36000, "bedrooms": 3, "bathrooms": 2, "floor": 0, "totalFloors": 4,
+    "lift": false, "parking": true, "furnishing": "semi", "petFriendly": true,
+    "amenities": ["balcony"],
+    "commute": { "Hinjewadi": 25, "Shivajinagar": 36, "Kharadi": 60, "Magarpatta": 62 },
+    "description": "Ground-floor flat with a small garden sit-out. Budget-friendly, no lift needed, parking included.",
+    "image": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&q=70&auto=format&fit=crop"
+  },
+  {
+    "id": "p14", "title": "2BHK + study in Baner", "area": "Baner", "address": "Baner-Pashan Link Road",
+    "rent": 39000, "bedrooms": 2, "bathrooms": 2, "floor": 5, "totalFloors": 12,
+    "lift": true, "parking": true, "furnishing": "furnished", "petFriendly": true,
+    "amenities": ["gym", "security", "powerBackup", "balcony"],
+    "commute": { "Hinjewadi": 26, "Shivajinagar": 28, "Kharadi": 58, "Magarpatta": 60 },
+    "description": "Two bedrooms plus a small study that could fit a single bed. Great building with a gym; tight for three people.",
+    "image": "https://images.unsplash.com/photo-1560184897-ae75f418493e?w=900&q=70&auto=format&fit=crop"
+  },
+  {
+    "id": "p15", "title": "3BHK in Aundh (older building)", "area": "Aundh", "address": "Parihar Chowk, Aundh",
+    "rent": 41000, "bedrooms": 3, "bathrooms": 2, "floor": 3, "totalFloors": 4,
+    "lift": false, "parking": true, "furnishing": "unfurnished", "petFriendly": false,
+    "amenities": ["security"],
+    "commute": { "Hinjewadi": 30, "Shivajinagar": 20, "Kharadi": 52, "Magarpatta": 50 },
+    "description": "Well-located but older walk-up on the third floor. Large rooms, needs your own furniture.",
+    "image": "https://images.unsplash.com/photo-1598928506311-c55ded91a20c?w=900&q=70&auto=format&fit=crop"
+  },
+  {
+    "id": "p16", "title": "4BHK in Baner", "area": "Baner", "address": "Sus Road, Baner",
+    "rent": 62000, "bedrooms": 4, "bathrooms": 4, "floor": 8, "totalFloors": 15,
+    "lift": true, "parking": true, "furnishing": "semi", "petFriendly": true,
+    "amenities": ["gym", "pool", "security", "powerBackup", "balcony"],
+    "commute": { "Hinjewadi": 24, "Shivajinagar": 32, "Kharadi": 62, "Magarpatta": 64 },
+    "description": "Four bedrooms, so a spare room for guests or a home office. Full amenities, pets allowed. Pricier because of the extra room.",
+    "image": "https://images.unsplash.com/photo-1617098900591-3f90928e8c54?w=900&q=70&auto=format&fit=crop"
+  }
+]
