@@ -32,6 +32,17 @@ export function OptionCard({ r, index }: { r: PropertyResult; index: number }) {
             {p.petFriendly ? " · Pets OK" : ""}
           </p>
           <p className="mt-2 text-sm text-stone-600">{p.description}</p>
+          <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-stone-500">
+            {p.deposit ? <span>Deposit {rupees(p.deposit)}</span> : null}
+            {p.commuteEstimated && <span>Commute times are estimates for the area</span>}
+            {p.sourceUrl ? (
+              <a href={p.sourceUrl} target="_blank" rel="noreferrer" className="font-medium text-brand-700 hover:underline">
+                View listing on NoBroker ↗
+              </a>
+            ) : (
+              p.source !== "nobroker" && <span>Sample listing</span>
+            )}
+          </div>
         </div>
       </div>
 

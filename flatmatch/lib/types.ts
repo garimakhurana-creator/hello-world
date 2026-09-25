@@ -38,6 +38,12 @@ export interface Property {
   commute: Record<Hub, number>; // peak-hour minutes to each office hub
   description: string;
   image: string;
+  // Set for imported (real) listings; absent on mock data.
+  source?: "mock" | "nobroker";
+  sourceUrl?: string | null;
+  deposit?: number | null;
+  commuteEstimated?: boolean; // commute derived from the area, not the exact address
+  unknownAmenities?: Amenity[]; // listing didn't say either way
 }
 
 export interface Requirements {

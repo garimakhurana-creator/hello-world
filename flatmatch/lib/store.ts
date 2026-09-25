@@ -132,6 +132,8 @@ function supabaseStore(db: SupabaseClient): Store {
         bedrooms: p.bedrooms, bathrooms: p.bathrooms, floor: p.floor, totalFloors: p.total_floors,
         lift: p.lift, parking: p.parking, furnishing: p.furnishing, petFriendly: p.pet_friendly,
         amenities: p.amenities, commute: p.commute, description: p.description, image: p.image_url,
+        source: p.source ?? "mock", sourceUrl: p.source_url ?? null, deposit: p.deposit ?? null,
+        commuteEstimated: p.commute_estimated ?? false, unknownAmenities: p.unknown_amenities ?? [],
       })) as Property[];
     },
     async getExplanation(groupId, scope, hash) {

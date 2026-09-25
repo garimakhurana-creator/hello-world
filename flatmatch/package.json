@@ -7,8 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "test": "node --test --disable-warning=MODULE_TYPELESS_PACKAGE_JSON lib/*.test.ts",
-    "seed": "node --env-file=.env.local scripts/seed.mjs"
+    "test": "node --test --disable-warning=MODULE_TYPELESS_PACKAGE_JSON lib/*.test.ts scripts/*.test.mjs",
+    "seed": "node --env-file=.env.local scripts/seed.mjs",
+    "import-listings": "node --env-file=.env.local scripts/import-listings.mjs"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.117.1",

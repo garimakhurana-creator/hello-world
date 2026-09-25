@@ -15,6 +15,7 @@ const rows = properties.map((p) => ({
   bedrooms: p.bedrooms, bathrooms: p.bathrooms, floor: p.floor, total_floors: p.totalFloors,
   lift: p.lift, parking: p.parking, furnishing: p.furnishing, pet_friendly: p.petFriendly,
   amenities: p.amenities, commute: p.commute, description: p.description, image_url: p.image,
+  source: "mock",
 }));
 
 const db = createClient(url, key, { auth: { persistSession: false } });

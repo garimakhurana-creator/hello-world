@@ -1,4 +1,5 @@
 import type { Amenity, Furnishing } from "./types";
+import areaTable from "../data/areas.json" with { type: "json" };
 
 export const AMENITY_LABELS: Record<Amenity, string> = {
   lift: "Lift",
@@ -17,21 +18,7 @@ export const FURNISHING_LABELS: Record<Furnishing, string> = {
   unfurnished: "Unfurnished",
 };
 
-export const AREAS = [
-  "Aundh",
-  "Balewadi",
-  "Baner",
-  "Bavdhan",
-  "Hinjewadi",
-  "Kalyani Nagar",
-  "Kharadi",
-  "Koregaon Park",
-  "Kothrud",
-  "Magarpatta",
-  "Pimple Saudagar",
-  "Viman Nagar",
-  "Wakad",
-];
+export const AREAS: string[] = areaTable.map((a) => a.name);
 
 export function rupees(n: number): string {
   return "₹" + Math.round(n).toLocaleString("en-IN");

@@ -27,7 +27,7 @@ export default async function Results(props: PageProps<"/g/[code]/results">) {
         <Eyebrow><span className="mt-4 block">Step 3 of 3 · Your shortlist</span></Eyebrow>
         <h1 className="mt-2 text-3xl font-semibold tracking-tight">{shortlist.length} flats worth discussing</h1>
         <p className="mt-2 max-w-3xl text-stone-600">
-          We checked {results.length} listings against everyone&apos;s answers. {fullCount === 0
+          We checked {results.length} {results.some((r) => r.property.source === "nobroker") ? "NoBroker listings (landlords open to flatmates)" : "listings"} against everyone&apos;s answers. {fullCount === 0
             ? "None meets every must-have, so these are the closest, with exactly what breaks."
             : `${fullCount} ${fullCount === 1 ? "meets" : "meet"} every must-have.`}{" "}
           This isn&apos;t a recommendation. It shows who gets what, so the three of you can decide.

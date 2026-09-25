@@ -79,7 +79,7 @@ export function checkPerson(p: Property, r: Requirements, groupSize: number): Ch
       label: mins <= r.commuteMax ? "Commute" : "Commute exceeds limit",
       kind: r.commuteLevel,
       ok: mins <= r.commuteMax,
-      detail: `${mins} min to ${r.officeHub} · limit ${r.commuteMax} min`,
+      detail: `${p.commuteEstimated ? "~" : ""}${mins} min to ${r.officeHub}${p.commuteEstimated ? " (area estimate)" : ""} · limit ${r.commuteMax} min`,
     });
   }
 
@@ -101,12 +101,19 @@ export function checkPerson(p: Property, r: Requirements, groupSize: number): Ch
   for (const [a, level] of Object.entries(r.amenities) as [Amenity, Requirements["amenities"][Amenity]][]) {
     if (!level || level === "none") continue;
     const ok = hasAmenity(p, a);
+    const unknown = !ok && p.unknownAmenities?.includes(a);
     checks.push({
       id: `amenity-${a}`,
       label: AMENITY_LABELS[a],
       kind: level,
       ok,
-      detail: ok ? `Has ${AMENITY_LABELS[a].toLowerCase()}` : `No ${AMENITY_LABELS[a].toLowerCase()}`,
+      detail: a === "petFriendly" && !unknown
+        ? ok ? "Pets allowed" : "No pets allowed"
+        : ok
+        ? `Has ${AMENITY_LABELS[a].toLowerCase()}`
+        : unknown
+          ? `Not mentioned in listing (ask the owner)`
+          : `No ${AMENITY_LABELS[a].toLowerCase()}`,
     });
   }
 

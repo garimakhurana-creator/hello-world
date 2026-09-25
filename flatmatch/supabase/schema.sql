@@ -61,7 +61,14 @@ create table if not exists properties (
   amenities    text[] not null default '{}',
   commute      jsonb not null,                   -- {"Hinjewadi":25,...} minutes
   description  text not null,
-  image_url    text not null
+  image_url    text not null,
+  -- provenance for imported listings (see 002_imported_listings.sql)
+  source            text not null default 'mock',
+  source_url        text,
+  deposit           int,
+  commute_estimated boolean not null default false,
+  unknown_amenities text[] not null default '{}',
+  imported_at       timestamptz
 );
 
 -- Cached Gemini wording. Matching itself is recomputed deterministically on

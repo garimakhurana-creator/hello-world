@@ -150,6 +150,17 @@ export default async function Compare(props: PageProps<"/g/[code]/compare">) {
               <Row label="Lift · Parking" cells={picked.map((r) => `${yes(r.property.lift)} · ${yes(r.property.parking)}`)} />
               <Row label="Furnishing" cells={picked.map((r) => FURNISHING_LABELS[r.property.furnishing])} />
               <Row label="Pets" cells={picked.map((r) => yes(r.property.petFriendly))} />
+              <Row label="Deposit" cells={picked.map((r) => (r.property.deposit ? rupees(r.property.deposit) : "-"))} />
+              <Row
+                label="Listing"
+                cells={picked.map((r) =>
+                  r.property.sourceUrl ? (
+                    <a key="l" href={r.property.sourceUrl} target="_blank" rel="noreferrer" className="font-medium text-brand-700 hover:underline">NoBroker ↗</a>
+                  ) : (
+                    <span key="l" className="text-stone-400">Sample</span>
+                  ),
+                )}
+              />
               {people
                 .filter((p) => p.requirements.officeHub !== "wfh")
                 .map((p) => (
@@ -160,7 +171,7 @@ export default async function Compare(props: PageProps<"/g/[code]/compare">) {
                       const hub = p.requirements.officeHub as keyof typeof r.property.commute;
                       const mins = r.property.commute[hub];
                       const over = mins > p.requirements.commuteMax;
-                      return <span key="c" className={over ? "font-medium text-rose-700" : ""}>{mins} min to {hub}{over ? ` (limit ${p.requirements.commuteMax})` : ""}</span>;
+                      return <span key="c" className={over ? "font-medium text-rose-700" : ""}>{r.property.commuteEstimated ? "~" : ""}{mins} min to {hub}{over ? ` (limit ${p.requirements.commuteMax})` : ""}</span>;
                     })}
                   />
                 ))}
