@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="38%" r="75%">
+      <stop offset="0" stop-color="#d8cbb4"/><stop offset=".6" stop-color="#a8977b"/><stop offset="1" stop-color="#5b4d3a"/>
+    </radialGradient>
+    <linearGradient id="silver" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f4f4f2"/><stop offset=".45" stop-color="#b9b8b3"/><stop offset=".55" stop-color="#8d8c87"/><stop offset="1" stop-color="#d9d8d3"/>
+    </linearGradient>
+    <linearGradient id="lens" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0d0d0f"/><stop offset=".7" stop-color="#26272c"/><stop offset="1" stop-color="#4a4b52"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity=".25"/><stop offset=".4" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <g id="el" fill="#3c3b38">
+      <ellipse cx="0" cy="0" rx="13" ry="8"/>
+      <circle cx="12" cy="-4" r="6.5"/>
+      <path d="M17-2Q22 4 20 12H17Q19 5 15-1Z"/>
+      <rect x="-11" y="4" width="4" height="9"/><rect x="-4" y="4" width="4" height="9"/>
+      <rect x="3" y="4" width="4" height="9"/><rect x="8" y="3" width="4" height="10"/>
+      <path d="M-13-2Q-17 3-15 8" stroke="#3c3b38" stroke-width="1.5" fill="none"/>
+      <path d="M-6-8Q2-14 9-8Z"/>
+    </g>
+    <g id="fig" fill="#3c3b38"><circle cy="-9" r="3"/><path d="M-3-5H3L5 10H-5Z"/></g>
+  </defs>
+  <rect width="800" height="800" fill="url(#bg)"/>
+  <ellipse cx="400" cy="560" rx="330" ry="24" fill="#2a2016" opacity=".35"/>
+  <g transform="translate(0,90)">
+    <path d="M118 240H682Q690 290 672 350Q660 395 610 398H470Q440 398 428 362L420 330Q400 302 380 330L372 362Q360 398 330 398H190Q140 395 128 350Q110 290 118 240Z" fill="url(#lens)"/>
+    <path d="M118 240H682L500 398H190Q140 395 128 350Q110 290 118 240Z" fill="url(#shine)"/>
+    <rect x="100" y="200" width="600" height="48" rx="8" fill="url(#silver)" stroke="#6a6964"/>
+    <rect x="108" y="207" width="584" height="34" rx="4" fill="none" stroke="#6a6964" stroke-width="1"/>
+    <g transform="translate(0 226) scale(1 .95)">
+      <use href="#el" x="160"/><use href="#fig" x="200"/><use href="#fig" x="220"/>
+      <use href="#el" x="265"/><use href="#fig" x="305"/><use href="#el" x="350"/>
+      <use href="#fig" x="390"/><use href="#fig" x="410"/><use href="#el" x="455"/>
+      <use href="#fig" x="495"/><use href="#el" x="540"/><use href="#fig" x="580"/><use href="#fig" x="600"/>
+      <use href="#el" x="645"/>
+    </g>
+    <path d="M100 224L90 228V250L100 246Z M700 224L710 228V250L700 246Z" fill="#8d8c87"/>
+  </g>
+</svg>

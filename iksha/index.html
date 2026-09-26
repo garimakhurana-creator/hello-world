@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IKSHĀ — Heirloom Eyewear</title>
+  <meta name="description" content="IKSHĀ — luxury eyewear carrying India's motifs. Lotus, elephant, yali and chakra, hand-finished in brass and gemstones.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="announce">
+    <div class="announce-track">
+      <span>Free shipping across India</span><span>✦</span>
+      <span>7-day returns</span><span>✦</span>
+      <span>Pay later in 3 interest-free instalments</span><span>✦</span>
+      <span>Free monogram engraving on the Heirloom Edit</span>
+    </div>
+  </div>
+
+  <header class="nav" id="nav">
+    <button class="icon-btn menu-btn" aria-label="Open menu" id="menuBtn">
+      <svg viewBox="0 0 24 24"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+    </button>
+    <nav class="nav-links" id="navLinks">
+      <a href="#shop">Shop</a>
+      <a href="#edit">The Ivory Edit</a>
+      <a href="#craft">Craft</a>
+      <a href="#motifs">Motifs</a>
+      <a href="#lookbook">Lookbook</a>
+    </nav>
+    <a href="#" class="logo" aria-label="IKSHĀ home">
+      <span class="logo-word">IKSHĀ</span>
+      <span class="logo-sub">इक्षा · to see</span>
+    </a>
+    <div class="nav-actions">
+      <button class="icon-btn" aria-label="Wishlist" id="wishBtn">
+        <svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-9.2-8.6C1.2 8.2 3.2 4.5 6.7 4.5c2.1 0 3.6 1.2 5.3 3.1 1.7-1.9 3.2-3.1 5.3-3.1 3.5 0 5.5 3.7 3.9 6.9C19 15.6 12 20 12 20z"/></svg>
+        <span class="count" id="wishCount">0</span>
+      </button>
+      <button class="icon-btn" aria-label="Open bag" id="cartBtn">
+        <svg viewBox="0 0 24 24"><path d="M5 8h14l-1.2 12H6.2L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+        <span class="count" id="cartCount">0</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <img src="images/rani-ruby-shield.webp" alt="Rani ruby-jewelled shield sunglasses dripping molten gold on black marble" class="hero-img">
+    <div class="hero-veil"></div>
+    <div class="hero-copy">
+      <p class="eyebrow">The Heirloom Edit · 2026</p>
+      <h1>Heirlooms,<br><em>for the eyes.</em></h1>
+      <p class="hero-lede">Sunglasses carrying the motifs of Indian temples and courts: lotus, elephant, yali and chakra. Cast in brass and set with stone, one pair at a time.</p>
+      <div class="hero-ctas">
+        <a href="#shop" class="btn btn-gold">Shop the collection</a>
+        <a href="#craft" class="btn btn-ghost">Discover the craft</a>
+      </div>
+    </div>
+    <div class="hero-tag">
+      <span>Featured</span>
+      <strong>Rani Ruby Shield</strong>
+      <span>₹24,900 · Limited to 50 pairs</span>
+    </div>
+  </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Kamal</span><i>✦</i><span>Gaja</span><i>✦</i><span>Yali</span><i>✦</i><span>Chakra</span><i>✦</i><span>Garuda</span><i>✦</i><span>Vyaghra</span><i>✦</i>
+      <span>Kamal</span><i>✦</i><span>Gaja</span><i>✦</i><span>Yali</span><i>✦</i><span>Chakra</span><i>✦</i><span>Garuda</span><i>✦</i><span>Vyaghra</span><i>✦</i>
+    </div>
+  </div>
+
+  <!-- CATEGORIES -->
+  <section class="cats">
+    <a href="#shop" class="cat" data-filter="women">
+      <img src="images/panna-cat-eye.webp" alt="Woman wearing emerald cat-eye sunglasses with gold yali corners" loading="lazy">
+      <div class="cat-label"><span>Shop</span><h3>Women</h3></div>
+    </a>
+    <a href="#shop" class="cat" data-filter="men">
+      <img src="images/gaja-rectangle.webp" alt="Man wearing burgundy rectangle sunglasses with silver elephant temple" loading="lazy">
+      <div class="cat-label"><span>Shop</span><h3>Men</h3></div>
+    </a>
+    <a href="#shop" class="cat" data-filter="heirloom">
+      <img src="images/garuda-wrap.webp" alt="Man wearing amber wrap sunglasses with golden garuda wings" loading="lazy">
+      <div class="cat-label"><span>Shop</span><h3>Heirloom Edit</h3></div>
+    </a>
+  </section>
+
+  <!-- SHOP -->
+  <section class="shop" id="shop">
+    <div class="section-head">
+      <p class="eyebrow">The Collection</p>
+      <h2>Eleven frames, eleven stories</h2>
+      <p class="section-sub">Every frame is named for the motif it carries. Prices run from ₹7,500 to ₹24,900, all with UV400 lenses and a hand-finished hallmark.</p>
+    </div>
+    <div class="toolbar">
+      <div class="chips" role="tablist" id="chips">
+        <button class="chip active" data-filter="all">All</button>
+        <button class="chip" data-filter="women">Women</button>
+        <button class="chip" data-filter="men">Men</button>
+        <button class="chip" data-filter="unisex">Unisex</button>
+        <button class="chip" data-filter="heirloom">Heirloom</button>
+      </div>
+      <label class="sort">
+        <span>Sort</span>
+        <select id="sort">
+          <option value="featured">Featured</option>
+          <option value="low">Price: low to high</option>
+          <option value="high">Price: high to low</option>
+        </select>
+      </label>
+    </div>
+    <div class="grid" id="grid"></div>
+  </section>
+
+  <!-- IVORY EDIT -->
+  <section class="edit" id="edit">
+    <div class="edit-img">
+      <img src="images/campaign-ivory.webp" alt="Woman in an ivory suit wearing the Kamal lotus shield, walking past travertine architecture" loading="lazy">
+    </div>
+    <div class="edit-copy">
+      <p class="eyebrow">Campaign</p>
+      <h2>The Ivory Edit</h2>
+      <p>Travertine, raw silk and a single red shield. We shot the Kamal Shield in the midday sun because that's where it lives: at the wedding in Udaipur, on the terrace in Lutyens' Delhi, on the promenade in Cannes.</p>
+      <p>The lotus plaque on each hinge is cast in solid brass and hand-polished for four hours before it's gilded.</p>
+      <button class="btn btn-dark" data-open="kamal">Shop the Kamal Shield · ₹13,900</button>
+    </div>
+  </section>
+
+  <!-- CRAFT -->
+  <section class="craft" id="craft">
+    <div class="craft-img">
+      <img src="images/collection.webp" alt="Five IKSHĀ frames displayed on sandstone and basalt plinths" loading="lazy">
+    </div>
+    <div class="craft-body">
+      <p class="eyebrow">How a pair is made</p>
+      <h2>Forty days, <em>fourteen hands</em></h2>
+      <ol class="steps">
+        <li><span>01</span><div><h4>The motif</h4><p>Each design begins as a drawing from a temple frieze, a palace jaali or a miniature painting.</p></div></li>
+        <li><span>02</span><div><h4>The cast</h4><p>Motifs are carved in wax and lost-wax cast in brass, the method used for Chola bronzes.</p></div></li>
+        <li><span>03</span><div><h4>The setting</h4><p>Stones are hand-set in kundan style. The Heirloom Edit uses lab-grown rubies and emeralds.</p></div></li>
+        <li><span>04</span><div><h4>The finish</h4><p>Italian acetate is polished by hand. Every pair carries a serial number and a certificate of craft.</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- MOTIFS -->
+  <section class="motifs" id="motifs">
+    <div class="section-head light">
+      <p class="eyebrow">The Iconography</p>
+      <h2>Wear what the symbols mean</h2>
+    </div>
+    <div class="motif-row">
+      <article class="motif">
+        <svg viewBox="-30 -40 60 50"><g fill="none" stroke="currentColor" stroke-width="1.4"><ellipse cx="0" cy="-15" rx="6" ry="15" transform="rotate(-64)"/><ellipse cx="0" cy="-15" rx="6" ry="15" transform="rotate(64)"/><ellipse cx="0" cy="-16" rx="6.5" ry="16" transform="rotate(-32)"/><ellipse cx="0" cy="-16" rx="6.5" ry="16" transform="rotate(32)"/><ellipse cx="0" cy="-18" rx="7" ry="18"/></g></svg>
+        <h4>Kamal</h4><p>The lotus. Purity rising from still water.</p>
+      </article>
+      <article class="motif">
+        <svg viewBox="-24 -20 50 36"><g fill="none" stroke="currentColor" stroke-width="1.4"><ellipse cx="0" cy="0" rx="13" ry="8"/><circle cx="12" cy="-4" r="6.5"/><path d="M17-2Q22 4 20 12"/><path d="M-9 7v8M-2 7v8M5 7v8M10 6v9"/></g></svg>
+        <h4>Gaja</h4><p>The elephant. Wisdom, memory and royal procession.</p>
+      </article>
+      <article class="motif">
+        <svg viewBox="-24 -24 48 48"><g fill="none" stroke="currentColor" stroke-width="1.4"><circle r="20"/><circle r="3"/><path d="M0-20V20M-20 0H20M-14-14L14 14M14-14L-14 14"/></g></svg>
+        <h4>Chakra</h4><p>The wheel. Motion, order and dharma.</p>
+      </article>
+      <article class="motif">
+        <svg viewBox="-26 -20 52 36"><g fill="none" stroke="currentColor" stroke-width="1.4"><path d="M0 4C-6-6-16-10-24-8c6 2 10 6 12 12"/><path d="M0 4C6-6 16-10 24-8c-6 2-10 6-12 12"/><path d="M-18-4l4 5M-12-7l3 6M18-4l-4 5M12-7l-3 6"/><circle cx="0" cy="-2" r="3"/></g></svg>
+        <h4>Garuda</h4><p>The divine eagle. Sight that sees everything.</p>
+      </article>
+      <article class="motif">
+        <svg viewBox="-24 -22 48 44"><g fill="none" stroke="currentColor" stroke-width="1.4"><path d="M-14 16V-4Q-14-18 0-18Q14-18 14-4V16"/><circle cx="-5" cy="-6" r="2.5"/><circle cx="5" cy="-6" r="2.5"/><path d="M-6 4Q0 9 6 4M-10 12h20"/></g></svg>
+        <h4>Yali</h4><p>The temple guardian. Protection at the threshold.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- LOOKBOOK -->
+  <section class="lookbook" id="lookbook">
+    <div class="section-head">
+      <p class="eyebrow">Lookbook</p>
+      <h2>Seen on the street</h2>
+    </div>
+    <div class="masonry">
+      <figure class="tall" data-open="chandni"><img src="images/chandni-shield.webp" alt="Woman in the frosted Chandni Shield" loading="lazy"><figcaption>Chandni Shield</figcaption></figure>
+      <figure data-open="vyaghra"><img src="images/vyaghra-oversized.jpg" alt="Profile wearing the navy Vyaghra oversized frame" loading="lazy"><figcaption>Vyaghra Oversized</figcaption></figure>
+      <figure data-open="kesar"><img src="images/kesar-rectangle.jpg" alt="Woman wearing the saffron Kesar rectangle" loading="lazy"><figcaption>Kesar Rectangle</figcaption></figure>
+      <figure class="wide" data-open="garuda"><img src="images/garuda-wrap.webp" alt="Man wearing the Garuda wing wrap" loading="lazy"><figcaption>Garuda Wrap</figcaption></figure>
+    </div>
+  </section>
+
+  <!-- PROMISE -->
+  <section class="promise">
+    <div><strong>UV400</strong><span>Polarised, scratch-resistant lenses</span></div>
+    <div><strong>1-year</strong><span>Warranty on craft and hinges</span></div>
+    <div><strong>7-day</strong><span>Free returns, no questions asked</span></div>
+    <div><strong>Free</strong><span>Insured delivery across India</span></div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="words">
+    <p class="eyebrow">From the Darbar</p>
+    <div class="quotes">
+      <blockquote><p>“I wore the Panna to my sister's mehendi and three aunties asked if they were vintage.”</p><cite>Aanya R. · Mumbai</cite></blockquote>
+      <blockquote><p>“The weight of the brass tells you it's real. Nothing else I own feels like this.”</p><cite>Kabir S. · Bengaluru</cite></blockquote>
+      <blockquote><p>“Finally, luxury eyewear that looks like where I'm from.”</p><cite>Meher K. · Dubai</cite></blockquote>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="join">
+    <h2>Join the Darbar</h2>
+    <p>Get first access to limited drops, private previews and ₹1,000 off your first pair.</p>
+    <form id="joinForm" class="join-form">
+      <input type="email" required placeholder="Your email address" aria-label="Email address">
+      <button class="btn btn-gold" type="submit">Join</button>
+    </form>
+    <p class="join-ok" id="joinOk" hidden>Welcome to the Darbar. Your code is on its way.</p>
+  </section>
+
+  <footer class="footer">
+    <div class="foot-brand">
+      <span class="logo-word">IKSHĀ</span>
+      <p>Heirloom eyewear, designed in India.</p>
+    </div>
+    <div><h5>Shop</h5><a href="#shop">Women</a><a href="#shop">Men</a><a href="#shop">Heirloom Edit</a><a href="#shop">Gift cards</a></div>
+    <div><h5>Care</h5><a href="#">Shipping</a><a href="#">Returns</a><a href="#">Warranty</a><a href="#">Size guide</a></div>
+    <div><h5>House</h5><a href="#craft">Our craft</a><a href="#motifs">Motifs</a><a href="#">Stores</a><a href="#">Contact</a></div>
+    <p class="foot-legal">© 2026 IKSHĀ. All rights reserved.</p>
+  </footer>
+
+  <!-- QUICK VIEW -->
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="qvName">
+      <button class="icon-btn modal-x" data-close aria-label="Close"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+      <div class="qv-gallery">
+        <img id="qvImg" alt="">
+        <div class="qv-thumbs" id="qvThumbs"></div>
+      </div>
+      <div class="qv-info">
+        <p class="eyebrow" id="qvMotif"></p>
+        <h3 id="qvName"></h3>
+        <p class="qv-price" id="qvPrice"></p>
+        <p class="qv-emi" id="qvEmi"></p>
+        <p class="qv-desc" id="qvDesc"></p>
+        <div class="qv-opt">
+          <span>Lens</span>
+          <div class="swatches" id="qvLens"></div>
+        </div>
+        <ul class="qv-specs" id="qvSpecs"></ul>
+        <button class="btn btn-dark btn-block" id="qvAdd">Add to bag</button>
+        <p class="qv-note">Free insured delivery in 3–5 days · 7-day returns</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CART -->
+  <aside class="drawer" id="drawer" aria-hidden="true">
+    <div class="drawer-backdrop" data-close-cart></div>
+    <div class="drawer-panel">
+      <div class="drawer-head">
+        <h3>Your bag</h3>
+        <button class="icon-btn" data-close-cart aria-label="Close bag"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+      </div>
+      <div class="ship-bar"><span id="shipMsg"></span><div class="ship-track"><div id="shipFill"></div></div></div>
+      <ul class="drawer-items" id="drawerItems"></ul>
+      <div class="drawer-foot">
+        <div class="subtotal"><span>Subtotal</span><strong id="subtotal">₹0</strong></div>
+        <p class="qv-note">Taxes included. Shipping calculated at checkout.</p>
+        <button class="btn btn-gold btn-block" id="checkout">Checkout</button>
+      </div>
+    </div>
+  </aside>
+
+  <div class="toast" id="toast" role="status"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
