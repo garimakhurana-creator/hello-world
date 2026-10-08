@@ -2,6 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import { send } from "./api";
 import { setMe } from "./identity";
 import { btn, input } from "./ui";
 
@@ -18,17 +19,13 @@ export function JoinForm({ code }: { code: string }) {
         e.preventDefault();
         setBusy(true);
         setError("");
-        const res = await fetch(`/api/groups/${code}/members`, {
-          method: "POST",
-          headers: { "content-type": "application/json" },
-          body: JSON.stringify({ name }),
-        });
-        const data = await res.json();
+        const res = await send<{ memberId: string }>(`/api/groups/${code}/members`, "POST", { name });
         if (!res.ok) {
-          setError(data.error);
+          setError(res.error);
           setBusy(false);
           return;
         }
+        const data = res.data;
         setMe(code, data.memberId);
         router.push(`/g/${code}/m/${data.memberId}`);
       }}

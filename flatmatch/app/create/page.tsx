@@ -2,6 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import { send } from "@/components/api";
 import { setMe } from "@/components/identity";
 import { btn, Card, Eyebrow, input, Page } from "@/components/ui";
 
@@ -17,17 +18,13 @@ export default function CreateGroup() {
     e.preventDefault();
     setBusy(true);
     setError("");
-    const res = await fetch("/api/groups", {
-      method: "POST",
-      headers: { "content-type": "application/json" },
-      body: JSON.stringify({ groupName, yourName, expectedSize }),
-    });
-    const data = await res.json();
+    const res = await send<{ code: string; memberId: string }>("/api/groups", "POST", { groupName, yourName, expectedSize });
     if (!res.ok) {
-      setError(data.error);
+      setError(res.error);
       setBusy(false);
       return;
     }
+    const data = res.data;
     setMe(data.code, data.memberId);
     router.push(`/g/${data.code}/m/${data.memberId}?new=1`);
   }

@@ -16,6 +16,7 @@ export interface Store {
   addMember(groupId: string, name: string): Promise<Member>;
   saveRequirements(member: Member, req: Requirements): Promise<void>;
   listProperties(): Promise<Property[]>;
+  ping(): Promise<number>; // cheapest possible read; keeps a free Supabase project awake
   getExplanation(groupId: string, scope: string, hash: string): Promise<unknown | null>;
   saveExplanation(groupId: string, scope: string, hash: string, content: unknown): Promise<void>;
 }
@@ -99,6 +100,11 @@ function must<T>(res: { data: T | null; error: { message: string } | null }): T 
 function supabaseStore(db: SupabaseClient): Store {
   return {
     kind: "supabase",
+    async ping() {
+      const { count, error } = await db.from("properties").select("id", { count: "exact", head: true });
+      if (error) throw new Error(error.message);
+      return count ?? 0;
+    },
     async createGroup({ name, expectedSize, coordinatorName }) {
       const g = must(await db.from("groups").insert({ code: newCode(), name, expected_size: expectedSize }).select().single()) as GroupRow;
       const m = must(await db.from("members").insert({ group_id: g.id, name: coordinatorName, role: "coordinator" }).select().single()) as MemberRow;
@@ -181,6 +187,9 @@ function mutate<T>(fn: (db: LocalDb) => T): Promise<T> {
 
 const localStore: Store = {
   kind: "local",
+  async ping() {
+    return seedProperties.length;
+  },
   createGroup({ name, expectedSize, coordinatorName }) {
     return mutate((db) => {
       const now = new Date().toISOString();

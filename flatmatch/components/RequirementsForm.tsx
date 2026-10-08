@@ -4,6 +4,7 @@ import { useRouter } from "next/navigation";
 import { useState, type ReactNode } from "react";
 import { AMENITY_LABELS, AREAS, FURNISHING_LABELS } from "@/lib/labels";
 import { AMENITIES, HUBS, type Furnishing, type Level, type Requirements } from "@/lib/types";
+import { send } from "./api";
 import { setMe } from "./identity";
 import { btn, Card, input, LevelTag } from "./ui";
 
@@ -89,13 +90,9 @@ export function RequirementsForm({ code, memberId, initial }: { code: string; me
     e.preventDefault();
     setBusy(true);
     setError("");
-    const res = await fetch(`/api/groups/${code}/members/${memberId}`, {
-      method: "PUT",
-      headers: { "content-type": "application/json" },
-      body: JSON.stringify(r),
-    });
+    const res = await send(`/api/groups/${code}/members/${memberId}`, "PUT", r);
     if (!res.ok) {
-      setError((await res.json()).error ?? "Couldn't save. Try again.");
+      setError(res.error);
       setBusy(false);
       return;
     }
